@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GMDictionary_exceptions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMDictionary_exceptions",
+  "parent":{
+    "name":"GMDictionary",
+    "path":"folders/Libraries/GMDictionary.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
