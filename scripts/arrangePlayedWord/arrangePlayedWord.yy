@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"arrangePlayedWord",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"arrangePlayedWord",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

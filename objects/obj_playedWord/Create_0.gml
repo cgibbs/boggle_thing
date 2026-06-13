@@ -1,0 +1,1 @@
+self.word_list = ds_list_create();

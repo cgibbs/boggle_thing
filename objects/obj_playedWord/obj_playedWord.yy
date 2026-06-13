@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_boggleBoard",
+  "%Name":"obj_playedWord",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_boggleBoard",
+  "name":"obj_playedWord",
   "overriddenProperties":[],
   "parent":{
     "name":"objects",
@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sBoggleBoard",
-    "path":"sprites/sBoggleBoard/sBoggleBoard.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

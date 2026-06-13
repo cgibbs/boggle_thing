@@ -91,6 +91,8 @@ function populateBoard(){
 		createdTile.tile_letter = ds_list_find_value(tile_bag, i).letter;
 		createdTile.tile_value = ds_list_find_value(tile_bag, i).value;
 	
+		ds_list_add(board_inst.tile_list, createdTile);
+	
 		if ((i + 1) % 4 == 0) {
 			tile_x = board_x + TILE_ZERO_X;
 			tile_y += TILE_SIZE_W_BOUNDARIES;
