@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"populateBoard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"populateBoard",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
