@@ -1,6 +1,9 @@
 draw_set_colour(c_black);
 draw_set_font(arial24);
 draw_set_halign(fa_center);
+
+draw_text(x+64, y-40, name);
+
 if (hp > 0) {
 	draw_text(x + 34, y + 200, hp);
 }
@@ -10,5 +13,5 @@ if (defense > 0) {
 }
 
 if (isMyTurn) {
-	draw_sprite(sTurnIndicator, 0, x + 34, y - 70)
+	draw_sprite(sTurnIndicator, 0, x + 34, y - 100)
 }

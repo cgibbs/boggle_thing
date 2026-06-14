@@ -10,5 +10,5 @@ if (defense > 0) {
 }
 
 if (isMyTurn) {
-	draw_sprite(sTurnIndicator, 0, x + 34, y - 70)
+	draw_sprite(sTurnIndicator, 0, x + 34, y - 100)
 }
