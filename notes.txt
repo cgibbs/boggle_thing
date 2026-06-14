@@ -1,0 +1,5 @@
+How to make those behaviors modular? For example, the board lock in the Brutalist fight. Maybe implement a state machine to handle checking against flags set on the player and the room, e.g. "if room.enemyType == 'bleed' then put bleed tiles in bag", "if player.characterType == 'fisher' then only refill 12 tiles", "if player.characterType == 'jubilist' then don't calculate crits", etc.
+
+MAYBE NOT: Player and Enemy need to be objects, obviously, but obj_enemy needs an initialization method or something to load in HP values, attack cycles, etc.
+
+Maybe every type of encounter (a type being a fight against a unique enemy) should just be its own room. That way there's no dynamic loading, aside from the player stats/inventory/whatever (which can be in global). This will potentially lead to a lot of rooms with duplicate stuff, but also make it very easy to isolate rooms for testing and avoid introducing weird state-based bugs that might pop up after multiple rooms.
