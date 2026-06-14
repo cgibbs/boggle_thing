@@ -46,7 +46,11 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {
-			state_machine.ChangeState("Idle");	
+			if (self.hp > 0) {
+				state_machine.ChangeState("Idle");
+			} else {
+				state_machine.ChangeState("Dead");
+			}
 		}
 	});
 	
@@ -61,9 +65,18 @@ var _blockingDamage = new StatementState(self, "BlockingDamage")
 			state_machine.ChangeState("Idle");	
 		}
 	});
+	
+var _dead = new StatementState(self, "Dead")
+	.AddEnter(function() {
+		image_index = 4;
+		isMyTurn = false;
+	}).AddUpdate(function() {
+		
+	});
 
 state_machine
 	.AddState(_idle)
 	.AddState(_attacking)
 	.AddState(_takingDamage)
-	.AddState(_blockingDamage);
+	.AddState(_blockingDamage)
+	.AddState(_dead);
