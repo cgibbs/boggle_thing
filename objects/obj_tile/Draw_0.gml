@@ -1,3 +1,9 @@
+if (tile_type == "wood") {
+	image_index = 0;
+} else if (tile_type == "plastic") {
+	image_index = 1;	
+}
+
 draw_self();
 
 draw_set_colour(c_red);

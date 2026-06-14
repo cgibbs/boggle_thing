@@ -8,12 +8,20 @@ var _idle = new StatementState(self, "Idle")
 		image_index = 0;
 	})
 	.AddUpdate(function() {
-		var player = instance_find(obj_player, 0)
-		if (player.pendingDamage == 0) {
+		//var player = instance_find(obj_player, 0)
+		//if (player.pendingDamage == 0) {
+		//	state_machine.ChangeState("BlockingDamage");
+		//} else if (player.pendingDamage > 0) {
+		//	state_machine.ChangeState("TakingDamage");	
+		//}
+		var player = instance_find(obj_player, 0);
+		var calcDamage = self.pendingDamage - self.defense;
+		calcDamage = max(calcDamage, 0)
+		if (self.pendingDamage > 0 and calcDamage == 0) {
 			state_machine.ChangeState("BlockingDamage");
-		} else if (player.pendingDamage > 0) {
-			state_machine.ChangeState("TakingDamage");	
-		}
+		} else if (calcDamage > 0) {
+			state_machine.ChangeState("TakingDamage");
+		} 
 	});
 	
 var _attacking = new StatementState(self, "Attacking")
@@ -33,9 +41,8 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 	.AddEnter(function() {
 		show_debug_message("taking damage");
 		image_index = 3;
-		var player = instance_find(obj_player, 0)
-		player.hp -= player.pendingDamage;
-		player.pendingDamage = -1;
+		self.hp -= (self.pendingDamage - self.defense);
+		self.pendingDamage = -1;
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {

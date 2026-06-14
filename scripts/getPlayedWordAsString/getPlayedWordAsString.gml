@@ -21,3 +21,31 @@ function getPlayedWordValue() {
 	
 	return word_score;
 }
+
+function getPlayedWordAttack() {
+	var word_attack = 0;
+	with(instance_find(obj_playedWord, 0)) {
+		for (var i = 0; i < ds_list_size(word_list); i++) {
+			if (ds_list_find_value(word_list, i).tile_type == "wood") {
+				var numToAdd = ds_list_find_value(word_list, i).tile_value;
+				word_attack += numToAdd;
+			}
+		}
+	}
+	
+	return word_attack;
+}
+
+function getPlayedWordDefense() {
+	var word_defense = 0;
+	with(instance_find(obj_playedWord, 0)) {
+		for (var i = 0; i < ds_list_size(word_list); i++) {
+			if (ds_list_find_value(word_list, i).tile_type == "plastic") {
+				var numToAdd = ds_list_find_value(word_list, i).tile_value;
+				word_defense += numToAdd;
+			}
+		}
+	}
+	
+	return word_defense;
+}

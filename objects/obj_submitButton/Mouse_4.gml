@@ -1,17 +1,13 @@
 var testWord = getPlayedWordAsString();
-var potentialScore = getPlayedWordValue();
-
-show_debug_message(testWord);
 
 if (global.dictionary.check(testWord)) {
-	show_debug_message("word is valid!");
-	show_debug_message("submitted \"" + testWord + "\" for " + string(potentialScore) + " points!");
-	
 	// do damage stuff here, before emptying out the played word and stuff
 	
 	var enemy = instance_find(obj_enemy, 0);
+	enemy.pendingDamage = getPlayedWordAttack();
 	
-	enemy.pendingDamage = potentialScore;
+	var player = instance_find(obj_player, 0);
+	player.defense = getPlayedWordDefense();
 	
 	var playedWord = instance_find(obj_playedWord, 0);
 	
@@ -43,8 +39,7 @@ if (global.dictionary.check(testWord)) {
 	refillBoard();
 	
 	arrangePlayedWord();
-	
-	var player = instance_find(obj_player, 0);
+
 	player.state_machine.ChangeState("Attacking");
 	
 } else {

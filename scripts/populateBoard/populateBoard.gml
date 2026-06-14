@@ -10,8 +10,8 @@ global.FRESH_BAG = [
 	{letter: "a", value: 1},
 	{letter: "a", value: 1},
 	{letter: "a", value: 1},
-	{letter: "b", value: 1},
-	{letter: "b", value: 1},
+	{letter: "b", value: 2},
+	{letter: "b", value: 2},
 	{letter: "c", value: 1},
 	{letter: "c", value: 1},
 	{letter: "d", value: 1},
@@ -22,16 +22,18 @@ global.FRESH_BAG = [
 	{letter: "e", value: 1},
 	{letter: "e", value: 1},
 	{letter: "e", value: 1},
-	{letter: "f", value: 1},
-	{letter: "f", value: 1},
+	{letter: "f", value: 2},
+	{letter: "f", value: 2},
 	{letter: "g", value: 1},
 	{letter: "g", value: 1},
 	{letter: "g", value: 1},
 	{letter: "h", value: 1},
+	{letter: "h", value: 1},
 	{letter: "i", value: 1},
 	{letter: "i", value: 1},
 	{letter: "i", value: 1},
-	{letter: "j", value: 1},
+	{letter: "j", value: 2},
+	{letter: "k", value: 1},
 	{letter: "k", value: 1},
 	{letter: "l", value: 1},
 	{letter: "l", value: 1},
@@ -45,7 +47,7 @@ global.FRESH_BAG = [
 	{letter: "o", value: 1},
 	{letter: "o", value: 1},
 	{letter: "p", value: 1},
-	{letter: "q", value: 1},
+	{letter: "q", value: 2},
 	{letter: "r", value: 1},
 	{letter: "r", value: 1},
 	{letter: "s", value: 1},
@@ -55,11 +57,13 @@ global.FRESH_BAG = [
 	{letter: "u", value: 1},
 	{letter: "u", value: 1},
 	{letter: "u", value: 1},
-	{letter: "v", value: 1},
+	{letter: "v", value: 2},
+	{letter: "v", value: 2},
 	{letter: "w", value: 1},
-	{letter: "x", value: 1},
+	{letter: "x", value: 3},
 	{letter: "y", value: 1},
-	{letter: "z", value: 1}
+	{letter: "y", value: 1},
+	{letter: "z", value: 3}
 ]
 
 // call me at board creation time
@@ -192,6 +196,7 @@ function DropTile(ind) {
 function createTile(new_x, new_y) {
 	show_debug_message("created tile");
 	var new_tile = instance_create_layer(new_x, new_y, "Instances", obj_tile);
+	if (random(10) > 7) new_tile.tile_type = "plastic";
 	// get tile letter and value from bag once we're done testing board population code
 	//new_tile.tile_letter = 
 	//new_tile.tile_value = 

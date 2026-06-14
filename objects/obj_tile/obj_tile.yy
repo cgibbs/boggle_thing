@@ -31,6 +31,7 @@
     {"$GMObjectProperty":"v2","%Name":"tile_value","filters":[],"listItems":[],"multiselect":false,"name":"tile_value","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"isSelected","filters":[],"listItems":[],"multiselect":false,"name":"isSelected","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"hasBeenPlayed","filters":[],"listItems":[],"multiselect":false,"name":"hasBeenPlayed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"tile_type","filters":[],"listItems":[],"multiselect":false,"name":"tile_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"wood","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
