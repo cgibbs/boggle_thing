@@ -33,6 +33,7 @@
     {"$GMObjectProperty":"v2","%Name":"defense","filters":[],"listItems":[],"multiselect":false,"name":"defense","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"attackedLastTurn","filters":[],"listItems":[],"multiselect":false,"name":"attackedLastTurn","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"isMyTurn","filters":[],"listItems":[],"multiselect":false,"name":"isMyTurn","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"gold","filters":[],"listItems":[],"multiselect":false,"name":"gold","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

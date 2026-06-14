@@ -1,5 +1,9 @@
 image_speed = 0;
 
+randomize();
+
+gold = round(random(5) + 5);
+
 state_machine = new Statement(self);
 
 // Idle
@@ -97,6 +101,7 @@ var _dead = new StatementState(self, "Dead")
 	.AddEnter(function() {
 		image_index = 5;
 		isMyTurn = false;
+		global.playerGold += gold;
 	})
 	.AddUpdate(function() {
 		
