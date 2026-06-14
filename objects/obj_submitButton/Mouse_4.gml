@@ -44,6 +44,9 @@ if (global.dictionary.check(testWord)) {
 	
 	arrangePlayedWord();
 	
+	var player = instance_find(obj_player, 0);
+	player.state_machine.ChangeState("Attacking");
+	
 } else {
 	show_debug_message("word is invalid!");	
 }

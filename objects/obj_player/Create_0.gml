@@ -19,10 +19,12 @@ var _idle = new StatementState(self, "Idle")
 var _attacking = new StatementState(self, "Attacking")
 	.AddEnter(function() {
 		image_index = 1;
-		_attacking.TimerStart();
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {
+			var board = instance_find(obj_boggleBoard, 0);
+			board.state_machine.ChangeState("EnemyTurn");
+			
 			state_machine.ChangeState("Idle");	
 		}
 	});

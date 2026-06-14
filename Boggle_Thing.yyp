@@ -211,6 +211,7 @@
     {"id":{"name":"spr_tilemap_packed","path":"sprites/spr_tilemap_packed/spr_tilemap_packed.yy",},},
     {"id":{"name":"sSubmitButton","path":"sprites/sSubmitButton/sSubmitButton.yy",},},
     {"id":{"name":"sTileBlank","path":"sprites/sTileBlank/sTileBlank.yy",},},
+    {"id":{"name":"sTurnIndicator","path":"sprites/sTurnIndicator/sTurnIndicator.yy",},},
     {"id":{"name":"tilemap_characters_packed","path":"sprites/tilemap_characters_packed/tilemap_characters_packed.yy",},},
     {"id":{"name":"tl_backgrounds","path":"tilesets/tl_backgrounds/tl_backgrounds.yy",},},
     {"id":{"name":"tl_blocks","path":"tilesets/tl_blocks/tl_blocks.yy",},},
