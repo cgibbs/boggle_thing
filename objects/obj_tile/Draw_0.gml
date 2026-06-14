@@ -4,7 +4,13 @@ if (tile_type == "wood") {
 	image_index = 1;	
 }
 
-draw_self();
+
+
+if (isSelected) {
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_gray, 0.8)
+} else {
+	draw_self();
+}
 
 draw_set_colour(c_red);
 draw_set_font(arial24);
