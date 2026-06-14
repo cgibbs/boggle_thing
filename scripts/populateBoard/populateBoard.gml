@@ -204,3 +204,30 @@ function createTile(new_x, new_y) {
 	//new_tile.effect = 
 	return new_tile;
 }
+
+function emptyBoard() {
+	// deselect everything and empty the played word
+	with (instance_find(obj_boggleBoard, 0)) {
+		for (var i = 0; i < ds_list_size(tile_list); i++) {
+			var current_tile_val = ds_list_find_value(tile_list, i);
+			current_tile_val.isSelected = false;
+		}
+	}
+	
+	var playedWord = instance_find(obj_playedWord, 0);
+	
+	for (var i = 0; i < ds_list_size(playedWord.word_list); i++) {
+		with (ds_list_find_value(playedWord.word_list, i)) {
+			instance_destroy();	
+		}
+	}
+
+	var board_tile_list = instance_find(obj_boggleBoard, 0).tile_list;
+	for (var i = 0; i < TILE_COUNT; i++) {
+		with (ds_list_find_value(board_tile_list, i)) {
+			instance_destroy();	
+		}
+	}
+	
+	ds_list_clear(board_tile_list);
+}
