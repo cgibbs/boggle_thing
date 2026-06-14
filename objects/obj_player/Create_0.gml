@@ -1,3 +1,9 @@
+if (global.playerHp > -1) {
+	self.hp = global.playerHp;	
+} else {
+	global.playerHp = self.hp;	
+}
+
 image_speed = 0;
 
 state_machine = new Statement(self);

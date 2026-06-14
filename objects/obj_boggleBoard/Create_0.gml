@@ -40,10 +40,15 @@ var _enemyTurn = new StatementState(self, "EnemyTurn")
 	
 var _youWin = new StatementState(self, "YouWin")
 	.AddEnter(function() {
-		
+		global.playerWins += 1;
 	})
 	.AddUpdate(function() {
-		
+		if (state_machine.GetStateTime() >= 120) {
+			show_debug_message("going back to overworld");
+			var player = instance_find(obj_player, 0);
+			global.playerHp = player.hp;
+			room_goto(OverworldRoom);
+		}
 	});
 	
 var _youLose = new StatementState(self, "YouLose")
@@ -51,7 +56,9 @@ var _youLose = new StatementState(self, "YouLose")
 		
 	})
 	.AddUpdate(function() {
-		
+		if (state_machine.GetStateTime() >= 120) {
+			room_goto(OverworldRoom);
+		}
 	});
 
 state_machine
@@ -60,8 +67,9 @@ state_machine
 	.AddState(_youWin)
 	.AddState(_youLose);
 
+state_machine.ChangeState("PlayerTurn");
+state_machine.SetPaused(false);
+
 randomize();
 
 populateBoard();
-
-StatementLensUpdate();

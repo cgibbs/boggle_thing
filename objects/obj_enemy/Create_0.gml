@@ -39,10 +39,14 @@ var _attacking = new StatementState(self, "Attacking")
 	
 var _blocking = new StatementState(self, "Blocking")
 	.AddEnter(function() {
+		self.image_index = 2
 		self.defense = 3;
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 30) {
+			var board = instance_find(obj_boggleBoard, 0);
+			board.state_machine.ChangeState("PlayerTurn");
+			self.attackedLastTurn = false;
 			state_machine.ChangeState("Idle");	
 		}
 	})
