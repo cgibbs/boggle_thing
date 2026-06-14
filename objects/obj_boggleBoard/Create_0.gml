@@ -15,7 +15,7 @@ var _playerTurn = new StatementState(self, "PlayerTurn")
 		player.pendingDamage = -1;
 		player.defense = 0;
 		
-		var enemy = instance_find(obj_enemy, 0);
+		var enemy = instance_find(global.enemyType, 0);
 		enemy.isMyTurn = false;
 	})
 	.AddUpdate(function() {
@@ -27,7 +27,7 @@ var _enemyTurn = new StatementState(self, "EnemyTurn")
 		var player = instance_find(obj_player, 0);
 		player.isMyTurn = false;
 		
-		var enemy = instance_find(obj_enemy, 0);
+		var enemy = instance_find(global.enemyType, 0);
 		if (enemy.hp < 1) {
 			state_machine.ChangeState("YouWin");	
 		}

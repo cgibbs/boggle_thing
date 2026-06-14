@@ -2,8 +2,7 @@ var testWord = getPlayedWordAsString();
 
 if (global.dictionary.check(testWord)) {
 	// do damage stuff here, before emptying out the played word and stuff
-	
-	var enemy = instance_find(obj_enemy, 0);
+	var enemy = instance_find(global.enemyType, 0);
 	enemy.pendingDamage = getPlayedWordAttack();
 	
 	var player = instance_find(obj_player, 0);
