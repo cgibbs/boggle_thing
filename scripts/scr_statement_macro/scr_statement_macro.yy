@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_statement_macro",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_statement_macro",
+  "parent":{
+    "name":"Statement",
+    "path":"folders/RefresherTowelGames/Statement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

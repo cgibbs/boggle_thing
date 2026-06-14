@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_echo",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_echo",
+  "parent":{
+    "name":"Echo",
+    "path":"folders/RefresherTowelGames/Echo.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

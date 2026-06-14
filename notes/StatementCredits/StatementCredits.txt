@@ -1,0 +1,5 @@
+CREDITS
+
+Example art assets in this project are from Kenney (kenney.nl), used under their permissive license.
+
+Thank you to Kenney for providing high quality game art to the community.

@@ -1,0 +1,66 @@
+STATEMENT License (v1.0)
+Copyright (c) 2025 Andrew McIntosh (RefresherTowel Games). All rights reserved.
+
+This license applies to STATEMENT for GameMaker (the "Framework").
+
+By purchasing, downloading, or using the Framework, you agree to the terms below.
+
+1. Ownership
+
+1.1. You are purchasing a license to use the Framework, not the Framework itself.
+1.2. All rights, title, and interest in and to the Framework, including all code, documentation, and artwork shipped with it, remain with the copyright holder.
+
+2. Permitted use
+
+Subject to the rest of this license, you may:
+
+2.1. Use the Framework in any number of your own projects, both free and commercial.
+2.2. Modify the Framework source code for use inside your own projects.
+2.3. Use the Framework in client work, as long as the client only receives compiled builds and not the raw Framework source.
+2.4. Distribute compiled games and applications that include the Framework, with no additional royalties or attribution required (though attribution is appreciated).
+
+3. Per developer seat
+
+3.1. This is a per developer license. One purchase of the Framework covers one developer who has direct access to the Framework source code.
+3.2. If multiple developers on a team or studio will work directly with the Framework source code, each such developer should have their own license for the Framework, unless you have agreed otherwise with the author.
+3.3. You may share the Framework source code within your team or studio only with developers who are covered by valid licenses for the Framework, for the purpose of working on your projects.
+
+4. Restrictions
+
+You may not:
+
+4.1. Resell, repackage, or redistribute the Framework itself, in whole or in part, as a framework, asset, extension, template, or library, whether modified or unmodified.
+4.2. Make the Framework source code, or a substantial portion of it, publicly available (for example by uploading it to a public repository, gist, or website).
+4.3. Claim that you created the Framework.
+4.4. Use the Framework in a way that violates the license terms of GameMaker or any third party libraries used by the Framework.
+4.5. Use the artwork, icons, or branding shipped with the Framework as part of your own product branding, except to reference the Framework itself.
+
+5. Sharing code that uses the Framework
+
+5.1. You may share small code snippets that call into the Framework (for example in tutorials, blog posts, or answers on forums), as long as you do not share large portions of the Framework source itself.
+5.2. You may not distribute a project file that includes the full Framework source to people who do not have a valid license for the Framework.
+
+6. Updates
+
+6.1. If updates to the Framework are provided, they will be made available through the same platform you purchased or downloaded the Framework from (for example, itch.io).
+6.2. This license continues to apply to all updates, unless a different license is explicitly provided with that update.
+
+7. No warranty
+
+7.1. The Framework is provided "as is" and "as available", without any express or implied warranty.
+7.2. The author is not liable for any damages, loss of data, or issues arising from the use or misuse of the Framework.
+
+8. Termination
+
+8.1. If you violate this license, your rights to use the Framework are automatically terminated.
+8.2. Upon termination you must stop using the Framework and stop distributing any new builds that include it. Existing released builds may remain available.
+
+9. Third party assets
+
+9.1. Example projects and sample content distributed with the Framework may include third party assets (such as art, sound, or fonts) that are licensed separately from the Framework code.  
+9.2. Those third party assets remain under their own licenses and are not covered by this Framework license.  
+9.3. Your rights to use those assets are determined by their original authors and licenses. Where applicable, credits or links to those licenses are provided in the example project or documentation.
+
+Questions
+
+If you are unsure whether a particular use is allowed under this license, please contact RefresherTowel Games for clarification before proceeding.

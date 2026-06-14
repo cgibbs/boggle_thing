@@ -9,6 +9,10 @@ if (global.dictionary.check(testWord)) {
 	
 	// do damage stuff here, before emptying out the played word and stuff
 	
+	var enemy = instance_find(obj_enemy, 0);
+	
+	enemy.pendingDamage = potentialScore;
+	
 	var playedWord = instance_find(obj_playedWord, 0);
 	
 	with (instance_find(obj_boggleBoard, 0)) {
@@ -37,6 +41,8 @@ if (global.dictionary.check(testWord)) {
 	DoGravity();
 	
 	refillBoard();
+	
+	arrangePlayedWord();
 	
 } else {
 	show_debug_message("word is invalid!");	

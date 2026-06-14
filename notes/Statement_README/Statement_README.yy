@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"Statement_README",
+  "name":"Statement_README",
+  "parent":{
+    "name":"Statement",
+    "path":"folders/RefresherTowelGames/Statement.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

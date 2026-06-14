@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_statement_lens",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_statement_lens",
+  "parent":{
+    "name":"Statement",
+    "path":"folders/RefresherTowelGames/Statement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
