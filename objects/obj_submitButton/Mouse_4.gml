@@ -36,6 +36,8 @@ if (global.dictionary.check(testWord)) {
 	
 	DoGravity();
 	
+	refillBoard();
+	
 } else {
 	show_debug_message("word is invalid!");	
 }

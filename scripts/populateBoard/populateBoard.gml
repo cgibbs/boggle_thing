@@ -10,8 +10,6 @@ global.FRESH_BAG = [
 	{letter: "a", value: 1},
 	{letter: "a", value: 1},
 	{letter: "a", value: 1},
-	{letter: "a", value: 1},
-	{letter: "a", value: 1},
 	{letter: "b", value: 1},
 	{letter: "b", value: 1},
 	{letter: "c", value: 1},
@@ -43,9 +41,6 @@ global.FRESH_BAG = [
 	{letter: "n", value: 1},
 	{letter: "n", value: 1},
 	{letter: "n", value: 1},
-	{letter: "n", value: 1},
-	{letter: "o", value: 1},
-	{letter: "o", value: 1},
 	{letter: "o", value: 1},
 	{letter: "o", value: 1},
 	{letter: "o", value: 1},
@@ -108,6 +103,33 @@ function refillBoard(){
 	// if tile == undefined
 	// make new tile and replace undefined
 	
+	var tile_bag = ds_list_create();
+	
+	for (var i = 0; i < array_length(global.FRESH_BAG); i++) {
+		ds_list_add(tile_bag, global.FRESH_BAG[i]);	
+	}
+	
+	ds_list_shuffle(tile_bag)
+	
+	var board_inst = instance_find(obj_boggleBoard, 0);
+	
+	var board_x = board_inst.x;
+	var board_y = board_inst.y;
+	
+	for (var i = 0; i < ds_list_size(board_inst.tile_list); i++) {
+		var cur_tile = ds_list_find_value(board_inst.tile_list, i);
+		
+		if (cur_tile == undefined) {
+			var new_x = board_x + TILE_ZERO_X + TILE_SIZE_W_BOUNDARIES * (i % 4);
+			var new_y = board_y + TILE_ZERO_Y + TILE_SIZE_W_BOUNDARIES * (int64(i / 4));
+			var new_tile = createTile(new_x, new_y);
+			
+			new_tile.tile_letter = ds_list_find_value(tile_bag, i).letter;
+			new_tile.tile_value = ds_list_find_value(tile_bag, i).value;
+			
+			ds_list_set(board_inst.tile_list, i, new_tile);
+		}
+	}
 	
 	// OLD NOTES
 	// check whether hasBeenPlayed is true on tile
@@ -120,7 +142,6 @@ function refillBoard(){
 function removePlayed(){
 	show_debug_message("removing played tiles");
 	var board_inst = instance_find(obj_boggleBoard, 0);
-	var s = ds_list_size(board_inst.tile_list);
 	for (var i = 0; i < ds_list_size(board_inst.tile_list); i++) {
 		var cur_tile = ds_list_find_value(board_inst.tile_list, i);
 		
@@ -167,26 +188,6 @@ function DropTile(ind) {
 		tileBelowInd += 4;
 	}
 }
-
-//function LiftNullTile(ti) {
-//	var tileIndex = ti;
-//	var tileAboveIndex = tileIndex - BOARD_WIDTH;
-//	var board_tile_list = instance_find(obj_boggleBoard, 0).tile_list;
-//	while (tileAboveIndex >= 0) {
-//	    // code here
-//		//var tempTile = board_tile_list[tileIndex];
-//		//board_tile_list[tileIndex] = board_tile_list[tileAboveIndex];
-//		//board_tile_list[tileAboveIndex] = tempTile;
-//		var tempTile = ds_list_find_value(board_tile_list, tileIndex);
-//		var tempTile2 = ds_list_find_value(board_tile_list, tileAboveIndex);
-//		tempTile2.y += TILE_SIZE_W_BOUNDARIES;
-//		ds_list_set(board_tile_list, tileIndex, tempTile2);
-//		ds_list_set(board_tile_list, tileAboveIndex, tempTile);
-		
-//		tileIndex = tileAboveIndex;
-//		tileAboveIndex -= BOARD_WIDTH;
-//	}
-//}
 
 function createTile(new_x, new_y) {
 	show_debug_message("created tile");
