@@ -118,40 +118,75 @@ function refillBoard(){
 }
 
 function removePlayed(){
+	show_debug_message("removing played tiles");
 	var board_inst = instance_find(obj_boggleBoard, 0);
-	for (var i = 0; i < array_length(board_inst.tile_list); i++) {
-		var cur_tile = board_inst.tile_list[i];
+	var s = ds_list_size(board_inst.tile_list);
+	for (var i = 0; i < ds_list_size(board_inst.tile_list); i++) {
+		var cur_tile = ds_list_find_value(board_inst.tile_list, i);
+		
+		if (cur_tile == undefined) continue;
 		
 		if (cur_tile.hasBeenPlayed == true) {
-			board_inst.tile_list[i] = undefined;
+			//board_inst.tile_list[i] = undefined;
+			show_debug_message("deleting tile")
+			ds_list_set(board_inst.tile_list, i, undefined);
 			instance_destroy(cur_tile);
 		}
 	}
+	
+	show_debug_message(json_encode(board_inst.tile_list));
 }
 
 function DoGravity(){
 	// start from last tile and work backwards
-	// if tile is null, lift null
 	var board_tile_list = instance_find(obj_boggleBoard, 0).tile_list;
-	for (var i = array_length(board_tile_list) - 1; i >= 0; i--) {
-		if (board_tile_list[i] == undefined) {
-			LiftNullTile(i);
+	// subtracting 4 because we don't need to do gravity on bottom tiles
+	for (var i = ds_list_size(board_tile_list) - 4 - 1; i >= 0; i--) {
+		if (ds_list_find_value(board_tile_list, i) != undefined) {
+			//LiftNullTile(i);
+			DropTile(i);
 		}
 	}
 }
 
-function LiftNullTile(tileIndex) {
-	var tileAboveIndex = tileIndex - BOARD_WIDTH;
+function DropTile(ind) {
+	var curInd = ind;
 	var board_tile_list = instance_find(obj_boggleBoard, 0).tile_list;
-	while (tileAboveIndex > 0) {
-	    // code here
-		var tempTile = board_tile_list[tileIndex];
-		board_tile_list[tileIndex] = board_tile_list[tileAboveIndex];
-		board_tile_list[tileAboveIndex] = tempTile;
+	var tileBelowInd = ind + 4;
+	while (tileBelowInd < 16) {
+		if (ds_list_find_value(board_tile_list, tileBelowInd) == undefined) {
+			with(ds_list_find_value(board_tile_list, curInd)) {
+				y += TILE_SIZE_W_BOUNDARIES;
+			}
+			
+			ds_list_set(board_tile_list, tileBelowInd, ds_list_find_value(board_tile_list, curInd));
+			ds_list_set(board_tile_list, curInd, undefined);
+		}
 		
-		tileAboveIndex -= BOARD_WIDTH;
+		curInd = tileBelowInd;
+		tileBelowInd += 4;
 	}
 }
+
+//function LiftNullTile(ti) {
+//	var tileIndex = ti;
+//	var tileAboveIndex = tileIndex - BOARD_WIDTH;
+//	var board_tile_list = instance_find(obj_boggleBoard, 0).tile_list;
+//	while (tileAboveIndex >= 0) {
+//	    // code here
+//		//var tempTile = board_tile_list[tileIndex];
+//		//board_tile_list[tileIndex] = board_tile_list[tileAboveIndex];
+//		//board_tile_list[tileAboveIndex] = tempTile;
+//		var tempTile = ds_list_find_value(board_tile_list, tileIndex);
+//		var tempTile2 = ds_list_find_value(board_tile_list, tileAboveIndex);
+//		tempTile2.y += TILE_SIZE_W_BOUNDARIES;
+//		ds_list_set(board_tile_list, tileIndex, tempTile2);
+//		ds_list_set(board_tile_list, tileAboveIndex, tempTile);
+		
+//		tileIndex = tileAboveIndex;
+//		tileAboveIndex -= BOARD_WIDTH;
+//	}
+//}
 
 function createTile(new_x, new_y) {
 	show_debug_message("created tile");
