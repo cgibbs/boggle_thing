@@ -3,3 +3,7 @@ How to make those behaviors modular? For example, the board lock in the Brutalis
 MAYBE NOT: Player and Enemy need to be objects, obviously, but obj_enemy needs an initialization method or something to load in HP values, attack cycles, etc.
 
 Maybe every type of encounter (a type being a fight against a unique enemy) should just be its own room. That way there's no dynamic loading, aside from the player stats/inventory/whatever (which can be in global). This will potentially lead to a lot of rooms with duplicate stuff, but also make it very easy to isolate rooms for testing and avoid introducing weird state-based bugs that might pop up after multiple rooms.
+
+Puzzle encounters could be fun. Like, you have a pre-filled board based on a mixed-up word that's the same length as the tile count, and you have to create the best word you can (ideally figuring out the mixed-up word). Alternatively, x number of turns to score high enough for rewards, potentially with a reduced tileset or unusual tile modifiers, or maybe an "enemy" with very high defense. Score determines degrees of victory, which determines what you get from the encounter, and losing might cost you valuable resources (gold, hp, etc).
+
+Encounters should have a combat log, so that I can inject jokes to make up for this game being less fun than Pronoun Palace.
