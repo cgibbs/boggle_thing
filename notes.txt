@@ -2,12 +2,16 @@ How to make those behaviors modular? For example, the board lock in the Brutalis
 
 MAYBE NOT: Player and Enemy need to be objects, obviously, but obj_enemy needs an initialization method or something to load in HP values, attack cycles, etc.
 
-Maybe every type of encounter (a type being a fight against a unique enemy) should just be its own room. That way there's no dynamic loading, aside from the player stats/inventory/whatever (which can be in global). This will potentially lead to a lot of rooms with duplicate stuff, but also make it very easy to isolate rooms for testing and avoid introducing weird state-based bugs that might pop up after multiple rooms.
+DONE, PRETTY GOOD IDEA ACTUALLY: Maybe every type of encounter (a type being a fight against a unique enemy) should just be its own room. That way there's no dynamic loading, aside from the player stats/inventory/whatever (which can be in global). This will potentially lead to a lot of rooms with duplicate stuff, but also make it very easy to isolate rooms for testing and avoid introducing weird state-based bugs that might pop up after multiple rooms.
 
-Puzzle encounters could be fun. Like, you have a pre-filled board based on a mixed-up word that's the same length as the tile count, and you have to create the best word you can (ideally figuring out the mixed-up word). Alternatively, x number of turns to score high enough for rewards, potentially with a reduced tileset or unusual tile modifiers, or maybe an "enemy" with very high defense. Score determines degrees of victory, which determines what you get from the encounter, and losing might cost you valuable resources (gold, hp, etc).
+Puzzle encounters could be fun. Like, you have a pre-filled board based on a mixed-up word that's the same length as the tile count, and you have to create the best word you can (ideally figuring out the mixed-up word). Alternatively, x number of turns to score high enough for rewards, potentially with a reduced tileset or unusual tile modifiers, or maybe an "enemy" with very high defense. Score determines degrees of victory, which determines what you get from the encounter, and losing might cost you valuable resources (gold, hp, etc). NOTE: Tile modifiers are necessary to keep it from being trivially solveable with an internet anagram solver. Obviously anything can be brute-forced, but I do actually want it to be harder than "put all the letters into a form and get the answer back".
 
-Encounters should have a combat log, so that I can inject jokes to make up for this game being not as good as Pronoun Palace.
+BIG TODO, BUT WORTH: Encounters should have a combat log so that I can inject jokes to make up for this game being not as good as Pronoun Palace.
 
-When you sleep at the campground, it should open up a special encounter where you fight a bad dream, which doesn't attack the player (but maybe causes interesting board effects?). You have three turns to do as much damage as possible, and you regain health equivalent to the damage you dealt, with a bonus for actually defeating the bad dream (maybe a temporary buff or something, might be a good use for that Catalyst library). Nightmare "attack" adds one defense and converts a random (non-nightmare) tile to a nightmare tile.
+DONE: When you sleep at the campground, it should open up a special encounter where you fight a bad dream, which doesn't attack the player (but maybe causes interesting board effects?). You have three turns to do as much damage as possible, and you regain health equivalent to the damage you dealt, with a bonus for actually defeating the bad dream (maybe a temporary buff or something, might be a good use for that Catalyst library). 
+
+TODO: Nightmare "attack" adds one defense and converts a random (non-nightmare) tile to a nightmare tile.
 
 It would be kinda funny to make an enemy that's just an incorrectly-created sprite: different states could be represented with a screenshot of the image with the "transparent" background baked in, sized incorrectly, clipping at the edges... all kinds of possibilities.
+
+HIGH PRIORITY: Save/load system, save on exit.
