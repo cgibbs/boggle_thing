@@ -20,4 +20,4 @@ Flag-based Quest system: https://www.reddit.com/r/gamemaker/comments/wuo9x0/comm
 
 Possible text solution for talking to NPCs, handling quest text, etc: https://www.jujuadams.com/Chatterbox/#/4.0/
 
-... An enemy that's a bad Sprite, like the drink.
+SIGH, DONE ... An enemy that's a bad Sprite, like the drink.
