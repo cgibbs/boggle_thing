@@ -153,6 +153,7 @@
     {"id":{"name":"obj_controller_platformer","path":"objects/obj_controller_platformer/obj_controller_platformer.yy",},},
     {"id":{"name":"obj_controller_template_states","path":"objects/obj_controller_template_states/obj_controller_template_states.yy",},},
     {"id":{"name":"obj_ctrlMarket","path":"objects/obj_ctrlMarket/obj_ctrlMarket.yy",},},
+    {"id":{"name":"obj_ctrlMountains","path":"objects/obj_ctrlMountains/obj_ctrlMountains.yy",},},
     {"id":{"name":"obj_ctrlOverworld","path":"objects/obj_ctrlOverworld/obj_ctrlOverworld.yy",},},
     {"id":{"name":"obj_enemyFurry","path":"objects/obj_enemyFurry/obj_enemyFurry.yy",},},
     {"id":{"name":"obj_enemyKirbysDad","path":"objects/obj_enemyKirbysDad/obj_enemyKirbysDad.yy",},},
@@ -182,6 +183,7 @@
     {"id":{"name":"FurryRoom","path":"rooms/FurryRoom/FurryRoom.yy",},},
     {"id":{"name":"KirbysDadRoom","path":"rooms/KirbysDadRoom/KirbysDadRoom.yy",},},
     {"id":{"name":"MarketRoom","path":"rooms/MarketRoom/MarketRoom.yy",},},
+    {"id":{"name":"MountainsRoom","path":"rooms/MountainsRoom/MountainsRoom.yy",},},
     {"id":{"name":"OverworldMapRoom","path":"rooms/OverworldMapRoom/OverworldMapRoom.yy",},},
     {"id":{"name":"OverworldRoom","path":"rooms/OverworldRoom/OverworldRoom.yy",},},
     {"id":{"name":"rm_statement_2state","path":"rooms/rm_statement_2state/rm_statement_2state.yy",},},
@@ -266,6 +268,7 @@
     {"roomId":{"name":"KirbysDadRoom","path":"rooms/KirbysDadRoom/KirbysDadRoom.yy",},},
     {"roomId":{"name":"FurryRoom","path":"rooms/FurryRoom/FurryRoom.yy",},},
     {"roomId":{"name":"MarketRoom","path":"rooms/MarketRoom/MarketRoom.yy",},},
+    {"roomId":{"name":"MountainsRoom","path":"rooms/MountainsRoom/MountainsRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
