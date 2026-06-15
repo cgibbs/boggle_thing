@@ -8,8 +8,8 @@
   "name":"obj_locMarket",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"locationButtons",
+    "path":"folders/objects/locationButtons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -29,8 +29,8 @@
   ],
   "name":"VikingRoom",
   "parent":{
-    "name":"Boggle_Thing",
-    "path":"Boggle_Thing.yyp",
+    "name":"combat",
+    "path":"folders/rooms/combat.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

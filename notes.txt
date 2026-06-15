@@ -15,3 +15,9 @@ TODO: Nightmare "attack" adds one defense and converts a random (non-nightmare) 
 It would be kinda funny to make an enemy that's just an incorrectly-created sprite: different states could be represented with a screenshot of the image with the "transparent" background baked in, sized incorrectly, clipping at the edges... all kinds of possibilities.
 
 HIGH PRIORITY: Save/load system, save on exit.
+
+Flag-based Quest system: https://www.reddit.com/r/gamemaker/comments/wuo9x0/comment/ilbwahh/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button This is probably the most straightforward way to handle quest progress. The actual text of a quest can live with whatever entity you'd interact with to get/progress a quest, and be locked behind flags.
+
+Possible text solution for talking to NPCs, handling quest text, etc: https://www.jujuadams.com/Chatterbox/#/4.0/
+
+... An enemy that's a bad Sprite, like the drink.

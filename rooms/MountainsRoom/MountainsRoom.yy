@@ -25,8 +25,8 @@
   ],
   "name":"MountainsRoom",
   "parent":{
-    "name":"Boggle_Thing",
-    "path":"Boggle_Thing.yyp",
+    "name":"locations",
+    "path":"folders/rooms/locations.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -10,8 +10,8 @@
   "name":"obj_enemyDream",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"enemies",
+    "path":"folders/objects/enemies.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sDream",
-    "path":"sprites/sDream/sDream.yy",
+    "name":"sEnemyDream",
+    "path":"sprites/sEnemyDream/sEnemyDream.yy",
   },
   "spriteMaskId":null,
   "visible":true,

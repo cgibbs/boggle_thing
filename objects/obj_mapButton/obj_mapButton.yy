@@ -8,8 +8,8 @@
   "name":"obj_mapButton",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"buttons",
+    "path":"folders/objects/buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

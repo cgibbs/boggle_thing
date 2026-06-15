@@ -10,8 +10,8 @@
   "name":"obj_enemyFurry",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"enemies",
+    "path":"folders/objects/enemies.yy",
   },
   "parentObjectId":null,
   "persistent":false,

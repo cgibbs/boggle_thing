@@ -9,8 +9,8 @@
   "name":"obj_ctrlOverworld",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"ctrl",
+    "path":"folders/objects/ctrl.yy",
   },
   "parentObjectId":null,
   "persistent":false,

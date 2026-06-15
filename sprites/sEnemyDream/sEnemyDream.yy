@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"sDream",
+  "%Name":"sEnemyDream",
   "bboxMode":0,
   "bbox_bottom":59,
   "bbox_left":2,
@@ -23,19 +23,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"7fd8e8be-7ab7-4968-b2f8-77167c1f77f6","blendMode":0,"displayName":"default","isLocked":false,"name":"7fd8e8be-7ab7-4968-b2f8-77167c1f77f6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sDream",
+  "name":"sEnemyDream",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"sprites",
-    "path":"folders/sprites.yy",
+    "name":"enemies",
+    "path":"folders/sprites/enemies.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"sDream",
+    "%Name":"sEnemyDream",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -59,7 +59,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sDream",
+    "name":"sEnemyDream",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -71,13 +71,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"33214d3f-47fb-47e7-85b2-947b49fd167e","path":"sprites/sDream/sDream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"33214d3f-47fb-47e7-85b2-947b49fd167e","path":"sprites/sEnemyDream/sEnemyDream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"7eb4c0d3-0f32-4d29-a57e-39388d6d51d7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c8fd313f-6f5d-430d-b413-c151e3a1a565","path":"sprites/sDream/sDream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c8fd313f-6f5d-430d-b413-c151e3a1a565","path":"sprites/sEnemyDream/sEnemyDream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"2c69ed73-a69a-420d-8ad7-fe1217ab2cac","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b3bf4e32-7f2e-48aa-986d-8176fb068a99","path":"sprites/sDream/sDream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b3bf4e32-7f2e-48aa-986d-8176fb068a99","path":"sprites/sEnemyDream/sEnemyDream.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"32ababde-d06e-45ea-8ccb-c6774a22582a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

@@ -10,8 +10,8 @@
   "name":"obj_dreamBoggleBoard",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"boards",
+    "path":"folders/objects/boards.yy",
   },
   "parentObjectId":null,
   "persistent":false,
