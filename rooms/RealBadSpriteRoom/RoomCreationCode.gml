@@ -1,0 +1,1 @@
+global.enemyType = obj_enemyRealBadSprite;
