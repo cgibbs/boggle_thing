@@ -1,4 +1,5 @@
-var board = instance_find(obj_boggleBoard, 0);
+var board = instance_find(getBoardType(), 0);
+var boardType = getBoardType();
 var player = instance_find(obj_player, 0);
 
 if (board.state_machine.GetCurrentStateName() != "PlayerTurn"

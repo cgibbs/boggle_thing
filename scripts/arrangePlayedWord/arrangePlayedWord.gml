@@ -5,7 +5,7 @@ function arrangePlayedWord(){
 	var tile_y = playedWord.y;
 
 	show_debug_message("arranging tiles in played word");
-	var board = instance_find(obj_boggleBoard, 0);
+	var board = instance_find(getBoardType(), 0);
 	var testList = board.tile_list;
 	
 	if (ds_list_size(playedWord.word_list) > 0) {

@@ -10,7 +10,7 @@ if (global.dictionary.check(testWord)) {
 	
 	var playedWord = instance_find(obj_playedWord, 0);
 	
-	with (instance_find(obj_boggleBoard, 0)) {
+	with (instance_find(getBoardType(), 0)) {
 		for (var i = 0; i < ds_list_size(tile_list); i++) {
 			var temp_var = ds_list_find_value(tile_list, i)
 			if (ds_list_find_value(tile_list, i) != undefined) {
@@ -35,7 +35,11 @@ if (global.dictionary.check(testWord)) {
 	
 	DoGravity();
 	
-	refillBoard();
+	if (getBoardType() == obj_dreamBoggleBoard) {
+		refillDreamBoard();
+	} else {
+		refillBoard();
+	}
 	
 	arrangePlayedWord();
 

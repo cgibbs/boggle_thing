@@ -28,9 +28,9 @@ var _enemyTurn = new StatementState(self, "EnemyTurn")
 		player.isMyTurn = false;
 		
 		var enemy = instance_find(global.enemyType, 0);
-		if (enemy.hp < 1) {
-			state_machine.ChangeState("YouWin");	
-		}
+		//if (enemy.hp < 1) {
+		//	state_machine.ChangeState("YouWin");	
+		//}
 		enemy.isMyTurn = true;
 		enemy.defense = 0;
 	})
@@ -47,6 +47,7 @@ var _youWin = new StatementState(self, "YouWin")
 			show_debug_message("going back to overworld");
 			var player = instance_find(obj_player, 0);
 			global.playerHp = min(player.hp, global.playerMaxHp);
+			global.boardType = undefined;
 			room_goto(OverworldMapRoom);
 		}
 	});
@@ -72,4 +73,4 @@ state_machine.SetPaused(false);
 
 randomize();
 
-populateBoard();
+populateBadDream();

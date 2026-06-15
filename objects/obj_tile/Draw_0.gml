@@ -2,6 +2,10 @@ if (tile_type == "wood") {
 	image_index = 0;
 } else if (tile_type == "plastic") {
 	image_index = 1;	
+} else if (tile_type == "dream") {
+	image_index = 2;
+} else if (tile_type == "nightmare") {
+	image_index = 3;	
 }
 
 

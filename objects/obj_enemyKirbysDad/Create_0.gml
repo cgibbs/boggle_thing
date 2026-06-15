@@ -33,7 +33,7 @@ var _attacking = new StatementState(self, "Attacking")
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {
-			var board = instance_find(obj_boggleBoard, 0);
+			var board = instance_find(getBoardType(), 0);
 			board.state_machine.ChangeState("PlayerTurn");
 			self.isMyTurn = false;
 			self.attackedLastTurn = true;
@@ -48,7 +48,7 @@ var _blocking = new StatementState(self, "Blocking")
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 30) {
-			var board = instance_find(obj_boggleBoard, 0);
+			var board = instance_find(getBoardType(), 0);
 			board.state_machine.ChangeState("PlayerTurn");
 			self.attackedLastTurn = false;
 			state_machine.ChangeState("Idle");	

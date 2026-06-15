@@ -77,7 +77,7 @@ function populateBoard(){
 	ds_list_shuffle(tile_bag)
 	
 	show_debug_message("populating board");
-	var board_inst = instance_find(obj_boggleBoard, 0);
+	var board_inst = instance_find(getBoardType(), 0);
 	var board_x = board_inst.x;
 	var board_y = board_inst.y;
 	
@@ -115,7 +115,7 @@ function refillBoard(){
 	
 	ds_list_shuffle(tile_bag)
 	
-	var board_inst = instance_find(obj_boggleBoard, 0);
+	var board_inst = instance_find(getBoardType(), 0);
 	
 	var board_x = board_inst.x;
 	var board_y = board_inst.y;
@@ -145,7 +145,7 @@ function refillBoard(){
 
 function removePlayed(){
 	show_debug_message("removing played tiles");
-	var board_inst = instance_find(obj_boggleBoard, 0);
+	var board_inst = instance_find(getBoardType(), 0);
 	for (var i = 0; i < ds_list_size(board_inst.tile_list); i++) {
 		var cur_tile = ds_list_find_value(board_inst.tile_list, i);
 		
@@ -164,7 +164,7 @@ function removePlayed(){
 
 function DoGravity(){
 	// start from last tile and work backwards
-	var board_tile_list = instance_find(obj_boggleBoard, 0).tile_list;
+	var board_tile_list = instance_find(getBoardType(), 0).tile_list;
 	// subtracting 4 because we don't need to do gravity on bottom tiles
 	for (var i = ds_list_size(board_tile_list) - 4 - 1; i >= 0; i--) {
 		if (ds_list_find_value(board_tile_list, i) != undefined) {
@@ -176,7 +176,7 @@ function DoGravity(){
 
 function DropTile(ind) {
 	var curInd = ind;
-	var board_tile_list = instance_find(obj_boggleBoard, 0).tile_list;
+	var board_tile_list = instance_find(getBoardType(), 0).tile_list;
 	var tileBelowInd = ind + 4;
 	while (tileBelowInd < 16) {
 		if (ds_list_find_value(board_tile_list, tileBelowInd) == undefined) {
@@ -207,7 +207,7 @@ function createTile(new_x, new_y) {
 
 function emptyBoard() {
 	// deselect everything and empty the played word
-	with (instance_find(obj_boggleBoard, 0)) {
+	with (instance_find(getBoardType(), 0)) {
 		for (var i = 0; i < ds_list_size(tile_list); i++) {
 			var current_tile_val = ds_list_find_value(tile_list, i);
 			current_tile_val.isSelected = false;
@@ -222,7 +222,7 @@ function emptyBoard() {
 		}
 	}
 
-	var board_tile_list = instance_find(obj_boggleBoard, 0).tile_list;
+	var board_tile_list = instance_find(getBoardType(), 0).tile_list;
 	for (var i = 0; i < TILE_COUNT; i++) {
 		with (ds_list_find_value(board_tile_list, i)) {
 			instance_destroy();	
@@ -230,4 +230,9 @@ function emptyBoard() {
 	}
 	
 	ds_list_clear(board_tile_list);
+}
+
+function getBoardType() {
+	if (global.boardType == noone) return obj_boggleBoard;
+	else return global.boardType;
 }

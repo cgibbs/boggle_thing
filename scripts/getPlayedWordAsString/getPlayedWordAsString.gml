@@ -26,7 +26,9 @@ function getPlayedWordAttack() {
 	var word_attack = 0;
 	with(instance_find(obj_playedWord, 0)) {
 		for (var i = 0; i < ds_list_size(word_list); i++) {
-			if (ds_list_find_value(word_list, i).tile_type == "wood") {
+			if (ds_list_find_value(word_list, i).tile_type == "wood"
+				or ds_list_find_value(word_list, i).tile_type == "dream"
+				or ds_list_find_value(word_list, i).tile_type == "nightmare") {
 				var numToAdd = ds_list_find_value(word_list, i).tile_value;
 				word_attack += numToAdd;
 			}
