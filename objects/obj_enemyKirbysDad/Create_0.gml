@@ -44,14 +44,29 @@ var _attacking = new StatementState(self, "Attacking")
 var _blocking = new StatementState(self, "Blocking")
 	.AddEnter(function() {
 		self.image_index = 2
-		self.defense = 3;
+		var board = instance_find(getBoardType(), 0);
+		//board.gravityEnabled = false;
+		var tileIndicesToEat = getNRandomTileIndices(3);
+		var word_score = 0;
+		for (var i = 0; i < ds_list_size(tileIndicesToEat); i++) {
+			var target_idx = ds_list_find_value(tileIndicesToEat, i);
+			var targetedTile = ds_list_find_value(board.tile_list, target_idx);
+			targetedTile.isTargeted = true;
+			var numToAdd = targetedTile.tile_value;
+			word_score += numToAdd;
+			// find index in tile_list and delete
+			//var tile_list_index = ds_list_find_index(board.tile_list, ds_list_find_value(tilesToEat, i));
+		}
+		self.defense = word_score;
 	})
 	.AddUpdate(function() {
-		if (state_machine.GetStateTime() >= 30) {
+		if (state_machine.GetStateTime() >= 60) {
 			var board = instance_find(getBoardType(), 0);
 			board.state_machine.ChangeState("PlayerTurn");
 			self.attackedLastTurn = false;
-			state_machine.ChangeState("Idle");	
+			state_machine.ChangeState("Idle");
+			// delete targeted tiles
+			deleteTargetedTiles();
 		}
 	})
 	

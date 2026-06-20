@@ -18,6 +18,28 @@ HIGH PRIORITY: Save/load system, save on exit.
 
 Flag-based Quest system: https://www.reddit.com/r/gamemaker/comments/wuo9x0/comment/ilbwahh/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button This is probably the most straightforward way to handle quest progress. The actual text of a quest can live with whatever entity you'd interact with to get/progress a quest, and be locked behind flags.
 
-Possible text solution for talking to NPCs, handling quest text, etc: https://www.jujuadams.com/Chatterbox/#/4.0/
+Possible text solutions for talking to NPCs, handling quest text, etc: https://www.jujuadams.com/Chatterbox/#/4.0/ 
+https://sites.google.com/view/fcdialoguesystem/home
+
+Do this tutorial:
+https://spiderlilystudios.medium.com/chatterbox-branching-dialogue-for-game-maker-studio-2-6834b4452f3b
+Then this one:
+https://sites.google.com/view/fcdialoguesystem/home
+And put them together so the Yarn dialogue feeds into the dialogue system.
 
 SIGH, DONE ... An enemy that's a bad Sprite, like the drink.
+
+Kirby's Dad special attack: lock board to prevent tiles from refilling, and next turn suck up the bottom four tiles and shoot them as damage. This gives the player one turn to remove as much of the bottom row as possible to minimize damage. Need to add a lock flag on the board, check against it in the refillBoard() function, and also create a "selection" sprite to overlay onto the bottom four tiles. I'll also need a function to pull the values of tiles (accept an array of indices so they can be pulled non-contiguously later), and a similar one for deleting tiles.
+
+Another special attack that might be fun is to gunk up a tile space so it can't be refilled for n turns. An even meaner version would allow the gunk to spread to tiles that get emptied out by the player, but it could be made more tactically interesting by making all the gunk disappear if none of the gunk tiles spread that turn.
+
+Need feedback for when a word is invalid (and also a better dictionary, the current one sucks)
+
+This might be useful at some point: https://offalynne.grebedoc.dev/Input/#/10.4/
+
+First quest: get five pop tabs (from Really Bad Sprite enemies).
+Reward: Pop Tab Necklace (small bonus, not sure what yet; maybe a spell that recharges on rest? Would be fun if its effect was a play on "pop" or "tab", but not sure what that would be yet. Maybe an "Autocomplete" spell that picks out a word of moderately high value for you?)
+
+Need to implement wildcards, and also an algorithm for finding the optimal value of a wildcard. Alternatively, make the player select the wildcard value to keep things simple.
+
+If gear gives spell usage, maybe you can only change it at the Campground (it would be improper to change clothes out in public, obviously) after resting. Since you can only rest after tiring yourself out (every n adventures, however many that might be), what would be a good mechanical pressure to put on players to make them think carefully about what to bring along? How do you keep the player from going and resting at every available opportunity? I guess situations that are like, a series of events that can't easily be exited out of are the most obvious and achievable, but maybe there could be benefits to going without rest. Maybe stat/skill bonuses that are stronger the more you win encounters, but which reset if you break the streak by losing or sleeping. Spell effects could be strengthened, too, though probably not at a linear pace to avoid degenerate strategies like doing a bunch of trivial fights to get strong. Level scaling might go some way to avoiding that outcome, but would probably just end up being scope creep. Maybe it'd just be a fun option for the player to get an insane win streak going and use it to absolutely clobber tough enemies. It might be boring to get the streak up in the first place, but they could feel rewarded for coming up with the strategy, and it would still take some careful balancing of resources to achieve, i.e. they'd have to still play the game properly.

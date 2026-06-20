@@ -34,6 +34,7 @@
     {"$GMObjectProperty":"v2","%Name":"tile_type","filters":[],"listItems":[],"multiselect":false,"name":"tile_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"wood","varType":2,},
     {"$GMObjectProperty":"v2","%Name":"isInWord","filters":[],"listItems":[],"multiselect":false,"name":"isInWord","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"original_tile","filters":[],"listItems":[],"multiselect":false,"name":"original_tile","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"isTargeted","filters":[],"listItems":[],"multiselect":false,"name":"isTargeted","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

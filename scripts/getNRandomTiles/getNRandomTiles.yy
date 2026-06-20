@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"getNRandomTiles",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"getNRandomTiles",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

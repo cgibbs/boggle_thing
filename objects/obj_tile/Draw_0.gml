@@ -16,6 +16,10 @@ if (isSelected) {
 	draw_self();
 }
 
+if (isTargeted) {
+	draw_sprite(sTarget, 0, x, y);	
+}
+
 draw_set_colour(c_red);
 draw_set_font(arial24);
 draw_set_halign(fa_center);

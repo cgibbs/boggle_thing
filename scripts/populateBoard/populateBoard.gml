@@ -163,6 +163,8 @@ function removePlayed(){
 }
 
 function DoGravity(){
+	var board = instance_find(getBoardType(), 0);
+	if (!board.gravityEnabled) return;
 	// start from last tile and work backwards
 	var board_tile_list = instance_find(getBoardType(), 0).tile_list;
 	// subtracting 4 because we don't need to do gravity on bottom tiles

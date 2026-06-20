@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"create_textevent",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_textevent",
+  "parent":{
+    "name":"FC_DialogueSystem",
+    "path":"folders/scripts/FC_DialogueSystem.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
