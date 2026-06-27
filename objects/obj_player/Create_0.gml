@@ -33,6 +33,7 @@ var _idle = new StatementState(self, "Idle")
 var _attacking = new StatementState(self, "Attacking")
 	.AddEnter(function() {
 		image_index = 1;
+		addToCombatLog("You attack!");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {

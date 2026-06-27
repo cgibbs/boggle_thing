@@ -27,7 +27,7 @@ var _idle = new StatementState(self, "Idle")
 var _attacking = new StatementState(self, "Attacking")
 	.AddEnter(function() {
 		var player = instance_find(obj_player, 0);
-		show_debug_message("enemy attacking");
+		addToCombatLog("The viking attacks with... a gun. Because he's not really a viking.");
 		player.pendingDamage = 3;
 		image_index = 1;
 	})
@@ -45,6 +45,7 @@ var _blocking = new StatementState(self, "Blocking")
 	.AddEnter(function() {
 		self.image_index = 2
 		self.defense = 3;
+		addToCombatLog("The viking hides behind his fake shield.");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 30) {
@@ -74,6 +75,7 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 	.AddEnter(function() {
 		image_index = 3;
 		self.hp -= self.pendingDamage - self.defense;
+		addToCombatLog("The viking shrieks as blows rain down upon him.");
 		self.pendingDamage = -1;
 	})
 	.AddUpdate(function() {
@@ -90,6 +92,7 @@ var _blockingDamage = new StatementState(self, "BlockingDamage")
 	.AddEnter(function() {
 		image_index = 2;
 		self.pendingDamage = -1;
+		addToCombatLog("You are unable to penetrate the plastic of the viking's shield.");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {
@@ -100,6 +103,7 @@ var _blockingDamage = new StatementState(self, "BlockingDamage")
 var _dead = new StatementState(self, "Dead")
 	.AddEnter(function() {
 		image_index = 5;
+		addToCombatLog("The viking is defeated, and returns to his homeland of Milwaukee.");
 		isMyTurn = false;
 		global.playerGold += gold;
 	})

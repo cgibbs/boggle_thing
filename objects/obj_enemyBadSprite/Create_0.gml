@@ -9,6 +9,8 @@ state_machine = new Statement(self);
 var _common = new FateValueEntry("COMMON").SetWeight(94);
 var _rare = new FateValueEntry("RARE").SetWeight(6);
 
+//addToCombatLog("You encounter a bad sprite. Looks like they got created pretty early in this process and never got fixed. Poor thing.")
+
 loot_table = new FateTable([_common, _rare]);
 
 // Idle
@@ -32,7 +34,7 @@ var _idle = new StatementState(self, "Idle")
 var _attacking = new StatementState(self, "Attacking")
 	.AddEnter(function() {
 		var player = instance_find(obj_player, 0);
-		show_debug_message("enemy attacking");
+		addToCombatLog("The Bad Sprite attacks... I think. It's hard to tell when the quality is this bad.");
 		player.pendingDamage = 3;
 		image_index = 1;
 	})
@@ -50,6 +52,7 @@ var _blocking = new StatementState(self, "Blocking")
 	.AddEnter(function() {
 		self.image_index = 2
 		//self.defense = 3;
+		addToCombatLog("The Bad Sprite corrupts some of your tiles! Now they decrease your total word score.");
 		var board = instance_find(getBoardType(), 0);
 		var tileIndicesToCorrupt = getNRandomTileIndices(3);
 		var word_score = 0;
@@ -92,6 +95,7 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 	.AddEnter(function() {
 		image_index = 3;
 		self.hp -= self.pendingDamage - self.defense;
+		addToCombatLog("The Bad Sprite takes " + string(self.pendingDamage - self.defense) + " points of damage. I can't tell if he's reacting to that, or just badly compressed.");
 		self.pendingDamage = -1;
 	})
 	.AddUpdate(function() {
@@ -108,6 +112,7 @@ var _blockingDamage = new StatementState(self, "BlockingDamage")
 	.AddEnter(function() {
 		image_index = 2;
 		self.pendingDamage = -1;
+		addToCombatLog("The Bad Sprite avoids damage, probably by being on the wrong Z-index.");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {
@@ -118,6 +123,7 @@ var _blockingDamage = new StatementState(self, "BlockingDamage")
 var _dead = new StatementState(self, "Dead")
 	.AddEnter(function() {
 		image_index = 5;
+		addToCombatLog("The Bad Sprite is defeated, or at the very least no longer being rendered.");
 		isMyTurn = false;
 		global.playerGold += gold;
 	})

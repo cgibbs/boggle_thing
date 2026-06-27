@@ -27,7 +27,7 @@ var _idle = new StatementState(self, "Idle")
 var _attacking = new StatementState(self, "Attacking")
 	.AddEnter(function() {
 		var player = instance_find(obj_player, 0);
-		show_debug_message("enemy attacking");
+		addToCombatLog("Kirby's dad believes strongly in gun ownership rights, so it should be no surprise that he hits you with the heater.");
 		player.pendingDamage = 3;
 		image_index = 1;
 	})
@@ -46,6 +46,7 @@ var _blocking = new StatementState(self, "Blocking")
 		self.image_index = 2
 		var board = instance_find(getBoardType(), 0);
 		//board.gravityEnabled = false;
+		addToCombatLog("Kirby's Dad eats some tiles, and uses their nutritional value to create a defensive barrier.");
 		var tileIndicesToEat = getNRandomTileIndices(3);
 		var word_score = 0;
 		for (var i = 0; i < ds_list_size(tileIndicesToEat); i++) {
@@ -89,6 +90,7 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 	.AddEnter(function() {
 		image_index = 3;
 		self.hp -= self.pendingDamage - self.defense;
+		addToCombatLog("Kirby's Dad's mustache bristles with fury as he takes " + string(self.pendingDamage - self.defense) + " damage.");
 		self.pendingDamage = -1;
 	})
 	.AddUpdate(function() {
@@ -105,6 +107,7 @@ var _blockingDamage = new StatementState(self, "BlockingDamage")
 	.AddEnter(function() {
 		image_index = 2;
 		self.pendingDamage = -1;
+		addToCombatLog("Kirby's Dad's mustache is much too strong to be damaged by your puny attacks.");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {
@@ -116,6 +119,7 @@ var _dead = new StatementState(self, "Dead")
 	.AddEnter(function() {
 		image_index = 5;
 		isMyTurn = false;
+		addToCombatLog("Kirby's dad is defeated! He deflates like a soccer ball on the end of a pitchfork.");
 		global.playerGold += gold;
 	})
 	.AddUpdate(function() {

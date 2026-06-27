@@ -14,6 +14,7 @@
     {"name":"inst_272DA9D2","path":"rooms/BadDreamRoom/BadDreamRoom.yy",},
     {"name":"inst_6D4CD5DE","path":"rooms/BadDreamRoom/BadDreamRoom.yy",},
     {"name":"inst_28B3E891","path":"rooms/BadDreamRoom/BadDreamRoom.yy",},
+    {"name":"inst_100AE7A2","path":"rooms/BadDreamRoom/BadDreamRoom.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -26,6 +27,7 @@
         {"$GMRInstance":"v4","%Name":"inst_272DA9D2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_272DA9D2","objectId":{"name":"obj_enemyDream","path":"objects/obj_enemyDream/obj_enemyDream.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":838.0,"y":144.0,},
         {"$GMRInstance":"v4","%Name":"inst_6D4CD5DE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6D4CD5DE","objectId":{"name":"obj_dreamBoggleBoard","path":"objects/obj_dreamBoggleBoard/obj_dreamBoggleBoard.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":455.0,"y":109.0,},
         {"$GMRInstance":"v4","%Name":"inst_28B3E891","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_28B3E891","objectId":{"name":"obj_ui_heart","path":"objects/obj_ui_heart/obj_ui_heart.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":185.0,"y":331.0,},
+        {"$GMRInstance":"v4","%Name":"inst_100AE7A2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_100AE7A2","objectId":{"name":"obj_combatLog","path":"objects/obj_combatLog/obj_combatLog.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":64.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4284111456,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

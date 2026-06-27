@@ -9,6 +9,8 @@ var _gold = new FateValueEntry("Gold").SetWeight(50);
 
 loot_table = new FateTable([_item, _gold]);
 
+//addToCombatLog("This is a REAL Bad Sprite, and also a REAL bad joke. The anger you feel about how bad the joke is pushes you to violence.")
+
 state_machine = new Statement(self);
 
 // Idle
@@ -32,9 +34,10 @@ var _idle = new StatementState(self, "Idle")
 var _attacking = new StatementState(self, "Attacking")
 	.AddEnter(function() {
 		var player = instance_find(obj_player, 0);
-		show_debug_message("enemy attacking");
 		player.pendingDamage = 3;
 		image_index = 1;
+		addToCombatLog("The Real Bad Sprite does the can-can and kicks you in the head. Yes, the can can can-can.");
+		addToCombatLog("... God, this joke sucks.");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {
@@ -50,6 +53,7 @@ var _blocking = new StatementState(self, "Blocking")
 	.AddEnter(function() {
 		self.image_index = 2
 		self.defense = 3;
+		addToCombatLog("The Real Bad Sprite cowers, increasing its defense by 3.");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 30) {
@@ -79,6 +83,7 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 	.AddEnter(function() {
 		image_index = 3;
 		self.hp -= self.pendingDamage - self.defense;
+		addToCombatLog("The Real Bad Sprite crumples under the weight of your blow, taking " + string(self.pendingDamage - self.defense) + " damage as a result.");
 		self.pendingDamage = -1;
 	})
 	.AddUpdate(function() {
@@ -94,6 +99,7 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 var _blockingDamage = new StatementState(self, "BlockingDamage")
 	.AddEnter(function() {
 		image_index = 2;
+		addToCombatLog("The Real Bad Sprite successfully defends itself from your attack.");
 		self.pendingDamage = -1;
 	})
 	.AddUpdate(function() {
@@ -106,6 +112,7 @@ var _dead = new StatementState(self, "Dead")
 	.AddEnter(function() {
 		image_index = 5;
 		isMyTurn = false;
+		addToCombatLog("The Real Bad Sprite is defeated! You feel less angry now that there are no more puns to be made.");
 		// this should all be made into a helper function
 		var _roll = FateRollValues(loot_table, 1);
 		var _value = _roll.GetFirstDrop();
