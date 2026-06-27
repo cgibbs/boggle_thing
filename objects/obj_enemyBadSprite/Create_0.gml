@@ -6,6 +6,11 @@ gold = round(random(5) + 5);
 
 state_machine = new Statement(self);
 
+var _common = new FateValueEntry("COMMON").SetWeight(94);
+var _rare = new FateValueEntry("RARE").SetWeight(6);
+
+loot_table = new FateTable([_common, _rare]);
+
 // Idle
 var _idle = new StatementState(self, "Idle")
 	.AddEnter(function() {

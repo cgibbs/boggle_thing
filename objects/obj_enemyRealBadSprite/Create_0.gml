@@ -4,6 +4,11 @@ randomize();
 
 gold = round(random(5) + 5);
 
+var _item = new FateValueEntry("Popped Soda Tab").SetWeight(50);
+var _gold = new FateValueEntry("Gold").SetWeight(50);
+
+loot_table = new FateTable([_item, _gold]);
+
 state_machine = new Statement(self);
 
 // Idle
@@ -101,7 +106,16 @@ var _dead = new StatementState(self, "Dead")
 	.AddEnter(function() {
 		image_index = 5;
 		isMyTurn = false;
-		global.playerGold += gold;
+		// this should all be made into a helper function
+		var _roll = FateRollValues(loot_table, 1);
+		var _value = _roll.GetFirstDrop();
+		if (string(_value) == "Gold") {
+			global.playerGold += gold;
+		} else {
+			// need to show this in end battle text
+			self.loot = string(_value);
+			addInventoryItem(string(_value), 1);
+		}
 	})
 	.AddUpdate(function() {
 		

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_fate_policies",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_fate_policies",
+  "parent":{
+    "name":"Fate",
+    "path":"folders/RefresherTowelGames/Fate.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -13,6 +13,7 @@
     {"name":"inst_73FC88DD4_1","path":"rooms/RealBadSpriteRoom/RealBadSpriteRoom.yy",},
     {"name":"inst_CD09A4B2_1","path":"rooms/RealBadSpriteRoom/RealBadSpriteRoom.yy",},
     {"name":"inst_39C1E7A3","path":"rooms/RealBadSpriteRoom/RealBadSpriteRoom.yy",},
+    {"name":"inst_67E88BCA","path":"rooms/RealBadSpriteRoom/RealBadSpriteRoom.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -24,6 +25,7 @@
         {"$GMRInstance":"v4","%Name":"inst_73FC88DD4_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_73FC88DD4_1","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":233.0,"y":144.0,},
         {"$GMRInstance":"v4","%Name":"inst_CD09A4B2_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_CD09A4B2_1","objectId":{"name":"obj_rerollButton","path":"objects/obj_rerollButton/obj_rerollButton.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":711.0,"y":542.0,},
         {"$GMRInstance":"v4","%Name":"inst_39C1E7A3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_39C1E7A3","objectId":{"name":"obj_enemyRealBadSprite","path":"objects/obj_enemyRealBadSprite/obj_enemyRealBadSprite.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":843.0,"y":144.0,},
+        {"$GMRInstance":"v4","%Name":"inst_67E88BCA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_67E88BCA","objectId":{"name":"obj_ui_heart","path":"objects/obj_ui_heart/obj_ui_heart.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":185.0,"y":331.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4284111456,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
