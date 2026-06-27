@@ -29,7 +29,7 @@ var _idle = new StatementState(self, "Idle")
 var _attacking = new StatementState(self, "Attacking")
 	.AddEnter(function() {
 		var player = instance_find(obj_player, 0);
-		show_debug_message("enemy doing bad dream stuff");
+		addToCombatLog("You dream that you're in an exam you didn't study for all semester. It doesn't actually hurt, but you still didn't enjoy the experience.");
 		image_index = 1;
 	})
 	.AddUpdate(function() {
@@ -63,6 +63,7 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 	.AddEnter(function() {
 		image_index = 3;
 		self.hp += self.pendingDamage - self.defense;
+		addToCombatLog("You dream about doing something cool in front of a crowd, and it actually goes as planned. Nice.");
 		self.pendingDamage = -1;
 	})
 	.AddUpdate(function() {
@@ -88,6 +89,7 @@ var _dead = new StatementState(self, "Dead")
 	.AddEnter(function() {
 		image_index = 5;
 		isMyTurn = false;
+		addToCombatLog("The dream has ended, and you feel well-rested.");
 		//global.playerGold += gold;
 		var player = instance_find(obj_player, 0);
 		player.hp += self.hp;

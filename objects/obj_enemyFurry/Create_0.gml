@@ -27,7 +27,7 @@ var _idle = new StatementState(self, "Idle")
 var _attacking = new StatementState(self, "Attacking")
 	.AddEnter(function() {
 		var player = instance_find(obj_player, 0);
-		show_debug_message("enemy attacking");
+		addToCombatLog("The furry shows you some really upsetting OC art.");
 		player.pendingDamage = 3;
 		image_index = 1;
 	})
@@ -45,6 +45,7 @@ var _blocking = new StatementState(self, "Blocking")
 	.AddEnter(function() {
 		self.image_index = 2
 		self.defense = 3;
+		addToCombatLog("The furry strikes a cute pose, reducing your ability to kick their ass.");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 30) {
@@ -74,6 +75,7 @@ var _takingDamage = new StatementState(self, "TakingDamage")
 	.AddEnter(function() {
 		image_index = 3;
 		self.hp -= self.pendingDamage - self.defense;
+		addToCombatLog("The furry doubles over in pain, taking " + string(self.pendingDamage - self.defense) + " damage.")
 		self.pendingDamage = -1;
 	})
 	.AddUpdate(function() {
@@ -90,6 +92,7 @@ var _blockingDamage = new StatementState(self, "BlockingDamage")
 	.AddEnter(function() {
 		image_index = 2;
 		self.pendingDamage = -1;
+		addToCombatLog("The furry successfully avoids your wrath.");
 	})
 	.AddUpdate(function() {
 		if (state_machine.GetStateTime() >= 60) {
@@ -100,6 +103,7 @@ var _blockingDamage = new StatementState(self, "BlockingDamage")
 var _dead = new StatementState(self, "Dead")
 	.AddEnter(function() {
 		image_index = 5;
+		addToCombatLog("The furry is defeated! They run off to repair their fursuit and commission more spicy art.");
 		isMyTurn = false;
 		global.playerGold += gold;
 	})
