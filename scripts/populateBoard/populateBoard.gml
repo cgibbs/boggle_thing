@@ -210,7 +210,9 @@ function emptyBoard() {
 	with (instance_find(getBoardType(), 0)) {
 		for (var i = 0; i < ds_list_size(tile_list); i++) {
 			var current_tile_val = ds_list_find_value(tile_list, i);
-			current_tile_val.isSelected = false;
+			if ((current_tile_val != noone) and (current_tile_val != undefined)) {
+				current_tile_val.isSelected = false;
+			}
 		}
 	}
 	
