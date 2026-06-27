@@ -46,5 +46,7 @@ if (global.dictionary.check(testWord)) {
 	player.state_machine.ChangeState("Attacking");
 	
 } else {
-	show_debug_message("word is invalid!");	
+	show_debug_message("word is invalid!");
+	isInvalid = true;
+	alarm[0] = 60;
 }

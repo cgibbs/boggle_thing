@@ -1,4 +1,4 @@
-StatementLensDraw();
+//StatementLensDraw();
 
 if (state_machine.GetCurrentStateName() == "YouWin") {
 	var enemy = instance_find(global.enemyType, 0);

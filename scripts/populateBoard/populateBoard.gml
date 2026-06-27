@@ -76,7 +76,6 @@ function populateBoard(){
 	
 	ds_list_shuffle(tile_bag)
 	
-	show_debug_message("populating board");
 	var board_inst = instance_find(getBoardType(), 0);
 	var board_x = board_inst.x;
 	var board_y = board_inst.y;
@@ -196,7 +195,6 @@ function DropTile(ind) {
 }
 
 function createTile(new_x, new_y) {
-	show_debug_message("created tile");
 	var new_tile = instance_create_layer(new_x, new_y, "Instances", obj_tile);
 	if (random(10) > 7) new_tile.tile_type = "plastic";
 	// get tile letter and value from bag once we're done testing board population code

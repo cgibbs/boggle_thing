@@ -36,7 +36,6 @@ function populateBadDream(){
 }
 
 function createDreamTile(new_x, new_y) {
-	show_debug_message("created tile");
 	var new_tile = instance_create_layer(new_x, new_y, "Instances", obj_tile);
 	if (random(10) > 8) new_tile.tile_type = "nightmare";
 	else new_tile.tile_type = "dream";

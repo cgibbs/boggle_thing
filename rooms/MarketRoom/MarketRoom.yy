@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"MarketRoom",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/MarketRoom/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -10,6 +10,7 @@
     {"name":"inst_4A67ABBD","path":"rooms/MarketRoom/MarketRoom.yy",},
     {"name":"inst_19F3DEE9","path":"rooms/MarketRoom/MarketRoom.yy",},
     {"name":"inst_2B5A480D","path":"rooms/MarketRoom/MarketRoom.yy",},
+    {"name":"inst_D3E4C0B","path":"rooms/MarketRoom/MarketRoom.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -20,6 +21,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_fightButton","path":"objects/obj_fightButton/obj_fightButton.yy",},"propertyId":{"name":"room_type","path":"objects/obj_fightButton/obj_fightButton.yy",},"resource":{"name":"MarketRoom","path":"rooms/MarketRoom/MarketRoom.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"MarketRoom",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":352.0,"y":608.0,},
         {"$GMRInstance":"v4","%Name":"inst_2B5A480D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2B5A480D","objectId":{"name":"obj_fightKirbysDadButton","path":"objects/obj_fightKirbysDadButton/obj_fightKirbysDadButton.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":512.0,},
+        {"$GMRInstance":"v4","%Name":"inst_D3E4C0B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_D3E4C0B","objectId":{"name":"obj_fightBadSpriteButton","path":"objects/obj_fightBadSpriteButton/obj_fightBadSpriteButton.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":352.0,"y":512.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4284111456,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
